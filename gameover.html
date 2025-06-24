@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Over</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('img/bg.webp') center center / cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'New Tegomin', serif;
+      color: black;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px white;
+    }
+
+    .score-box {
+      font-size: 30px;
+      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 22px;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Game Over</h1>
+  <div class="score-box" id="latestScore">Score: 0</div>
+  <div class="score-box" id="highScore">High Score: 0</div>
+  <button class="btn" onclick="window.location.href='level.html'">Replay</button>
+
+  <script>
+    const latestScore = localStorage.getItem("latestScore") || 0;
+    const highScore = localStorage.getItem("hiscore") || 0;
+
+    document.getElementById("latestScore").innerText = "Score: " + latestScore;
+    document.getElementById("highScore").innerText = "High Score: " + highScore;
+  </script>
+</body>
+</html>

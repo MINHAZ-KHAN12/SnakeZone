@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Snake Zone (Game)</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; 
+  background: url('img/Snake_img.jpg') no-repeat center center fixed; 
+  background-size: cover; color: #fff; 
+  display: flex; align-items: center; justify-content: center; 
+  height: 100vh; flex-direction: column; text-align: center;">
+
+  <h1 style="font-size: 48px; color: limegreen; margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000;">🐍Welcome to Snake Zone🐍</h1>
+
+  
+
+  <button onclick="startGame()" style="padding: 15px 30px; font-size: 18px; 
+    background-color: limegreen; color: black; border: none; 
+    border-radius: 10px; cursor: pointer; box-shadow: 2px 2px 8px #000;">
+    Start Game
+  </button>
+
+  <script>
+    function startGame() {
+      window.location.href = 'level.html';
+    }
+  </script>
+
